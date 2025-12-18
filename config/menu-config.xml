@@ -1,0 +1,18 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+ "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "https://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="dsql" targetRuntime="MyBatis3DynamicSql">
+    <jdbcConnection driverClass="org.postgresql.Driver"
+        connectionURL="jdbc:postgresql://localhost:15445/mydatabase" 
+        userId="myuser" password="secret"/>
+
+    <javaModelGenerator targetPackage="menu.model" targetProject="../target"/>
+
+    <javaClientGenerator targetPackage="menu.mapper" targetProject="../target"/>
+
+    <table tableName="system_domain_menu_attribute_tag" />
+    <table tableName="system_domain_menu_item" />
+    <table tableName="system_domain_menu_text" />
+  </context>
+</generatorConfiguration>
