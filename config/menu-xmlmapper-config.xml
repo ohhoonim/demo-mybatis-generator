@@ -1,0 +1,22 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+ "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+ "https://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="dsql" targetRuntime="MyBatis3">
+    <jdbcConnection driverClass="org.postgresql.Driver"
+        connectionURL="jdbc:postgresql://localhost:15445/mydatabase" 
+        userId="myuser" password="secret"/>
+
+    <javaModelGenerator targetPackage="menuXmlmapper.model" targetProject="../src"/>
+
+    <sqlMapGenerator targetPackage="menuXmlmapper.xml" targetProject="../src"/>
+
+    <javaClientGenerator type="MIXEDMAPPER" targetPackage="menuXmlmapper.dao" targetProject="../src"/>
+    <!-- <javaClientGenerator type="XMLMAPPER" targetPackage="menuXmlmapper.dao" targetProject="../src"/> -->
+    <!-- <javaClientGenerator type="ANNOTATEDMAPPER" targetPackage="menuXmlmapper.dao" targetProject="../src"/> -->
+
+    <table tableName="system_domain_menu_attribute_tag" />
+    <table tableName="system_domain_menu_item" />
+    <table tableName="system_domain_menu_text" />
+  </context>
+</generatorConfiguration>
